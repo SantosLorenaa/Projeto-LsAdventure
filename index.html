@@ -1,0 +1,222 @@
+<!DOCTYPE html>  
+<html lang="pt-br">
+<head>
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS do Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- JS do Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ls Adventure</title>
+    <style>
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        .animate-fade-in {
+          animation: fadeIn 1s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+      <!-- Header -->
+      <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-8 py-8 flex justify-between items-center">
+          <div class="text-2xl font-bold text-red-500">Ls<span class="text-black">Adventure</span></div>
+          
+          <!-- Botão do Hambúrguer para mobile -->
+          <button id="hamburger" class="block md:hidden text-3xl focus:outline-none" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+  
+          <!-- Menu de navegação desktop -->
+          <nav id="menu" class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-lg text-black hover:text-red-500 transition">Início</a>
+            <a href="#nossos-servicos" class="text-lg text-black hover:text-red-500 transition">Escalada</a>
+            <a href="#nossos-servicos" class="text-lg text-black hover:text-red-500 transition">Rafting</a>
+            <a href="#nossos-servicos" class="text-lg text-black hover:text-red-500 transition">Asa Delta</a>
+            <a href="#nossos-servicos" class="text-lg text-black hover:text-red-500 transition">Parapente</a>
+            <a href="#contato" class="text-lg text-black hover:text-red-500 transition">Contato</a>
+            <a href="login.html" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition">Login</a> 
+            
+          </nav>
+        </div>
+  
+        <!-- Menu lateral para mobile -->
+        <div id="mobileMenu" class="fixed top-0 right-0 w-2/3 h-full bg-white shadow-lg z-50 transform translate-x-full transition-transform">
+          <div class="flex justify-end p-4">
+            <button class="text-2xl text-red-500" onclick="toggleMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <nav class="flex flex-col items-center space-y-6 mt-12">
+            <a href="index.html" class="text-xl text-black hover:text-red-500 transition">Início</a>
+            <a href="#nossos-servicos" class="text-xl text-black hover:text-red-500 transition">Escalada</a>
+            <a href="#nossos-servicos" class="text-xl text-black hover:text-red-500 transition">Rafting</a>
+            <a href="#nossos-servicos" class="text-xl text-black hover:text-red-500 transition">Asa Delta</a>
+            <a href="#nossos-servicos" class="text-xl text-black hover:text-red-500 transition">Parapente</a>
+            <a href="#contato" class="text-xl text-black hover:text-red-500 transition">Contato</a>
+            <a href="login.html" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition">Login</a> 
+            
+          </nav>
+        </div>
+      </header>
+    <!-- Carrossel de imagens -->
+    <div class="container mx-auto my-8">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-4" style="font-family: poppins, serif;">Descubra as Alturas da Aventura!</h1>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/asadelta-um.jpg" alt="asa delta" class="w-full h-64 object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/asadelta-dois.jpg" alt="asa delta" class="w-full h-64 object-cover"> 
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/asadelta-tres.jpg" alt="asa delta" class="w-full h-64 object-cover">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <!-- Nossos Serviços -->
+    <div id="nossos-servicos" class="container mx-auto my-8">
+        <h2 class="text-2xl font-bold text-center mb-4">Nossos serviços</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <h3 class="font-bold text-lg">Asa Delta</h3>
+                <p>Voe alto e experimente a sensação de liberdade total com a asa delta! Aproveite uma vista deslumbrante lá de cima.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <h3 class="font-bold text-lg mb-2">Parapente</h3>
+                <p>Uma aventura para aqueles que desejam contemplar o mundo do alto com paisagens de tirar o fôlego.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <h3 class="font-bold text-lg mb-2">Rafting</h3>
+                <p>Enfrente as corredeiras e sinta a adrenalina nas águas selvagens em uma aventura cheia de ação.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <h3 class="font-bold text-lg mb-2">Escaladas Guiadas</h3>
+                <p>Explore as melhores trilhas com guias experientes que garantem uma experiência segura e emocionante.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experiências -->
+    <div class="container mx-auto my-8">
+        <h2 class="text-2xl font-bold text-center mb-4">Nossas experiências</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <img src="img/rafting-um.jpg" alt="rafting" class="w-full h-48 object-cover rounded-lg shadow-lg">
+            <img src="img/escalada-um.jpg" alt="escalada" class="w-full h-48 object-cover rounded-lg shadow-lg">
+            <img src="img/parapente-dois.jpg" alt="parapente" class="w-full h-48 rounded-lg shadow-lg">
+            <img src="img/escalada-dois.jpg" alt="escalada" class="w-full h-48 rounded-lg shadow-lg object-cover">
+            <img src="img/asadelta-um.jpg" alt="asa delta" class="w-full h-48 object-cover rounded-lg shadow-lg">
+            <img src="img/rafting-dois.jpg" alt="rafting" class="w-full h-48 object-cover rounded-lg shadow-lg">
+            <img src="img/asadelta-tres.jpg" alt="asa delta" class="w-full h-48 object-cover rounded-lg shadow-lg">
+            <img src="img/escalada-tres.jpg" alt="escalada" class="w-full h-48 object-cover rounded-lg shadow-lg">
+        </div>
+    </div>
+
+    <!-- Sobre Nós -->
+    <div class="container mx-auto my-12 px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Sobre nós</h2>
+        <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+            <div class="md:w-1/2">
+                <p class="text-lg text-gray-700 mb-4">
+                    Na <span class="font-bold text-red-500">LsAdventure</span>, somos apaixonados por aventura e comprometidos em oferecer experiências inesquecíveis.
+                </p>
+                <p class="text-lg text-gray-700 mb-4">
+                    Nossa missão é conectar as pessoas com a natureza e despertar o espírito de aventura que existe dentro de cada um.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Venha descobrir paisagens deslumbrantes e viver momentos emocionantes com a gente.
+                </p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="img/imagem-sobre.jpg" alt="sobre nós" class="w-full h-64 object-cover rounded-lg shadow-md">
+            </div>
+        </div>
+    </div>
+
+    <!-- Comentários dos Clientes -->
+    <div class="container mx-auto my-12 px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Comentários dos Clientes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                <p class="italic text-gray-700">"Incrível! A equipe é fantástica e as aventuras são inesquecíveis."</p>
+                <p class="mt-2 font-bold text-red-500"> - Luiza Matos</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                <p class="italic text-gray-700">"Experiência única! Recomendo a todos que amam adrenalina."</p>
+                <p class="mt-2 font-bold text-red-500">- Ana Paula</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                <p class="italic text-gray-700">"Paisagens maravilhosas e equipe altamente capacitada."</p>
+                <p class="mt-2 font-bold text-red-500">- Marcelo Souza</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção de Contato -->
+    <div id="contato" class="container mx-auto my-12 px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Entre em contato</h2>
+        <div class="flex flex-col md:flex-row md:space-x-8">
+            <div class="flex-1 text-center md:text-left">
+                <p class="text-lg text-gray-700 mb-2">📍 Rio de Janeiro, RJ</p>
+                <p class="text-lg text-gray-700 mb-2">📞 WhatsApp: (21) 99999-9999</p>
+                <p class="text-lg text-gray-700 mb-2">📧 Email: contato@lsadventure.com</p>
+            </div>
+            <div class="flex-1 text-center md:text-right">
+                <a href="https://instagram.com/lsadventure" class="text-gray-700 hover:text-red-500 mx-2">Instagram
+                    <i class="fab fa-instagram"></i> 
+
+                </a>
+                <a href="https://facebook.com/lsadventure" class="text-gray-700 hover:text-red-500 mx-2">Facebook
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé-->
+    <footer class="bg-gray-900 text-white text-center py-6">
+        <p>&copy; 2024 LsAdventure. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Swiper inicialização
+        var swiper = new Swiper(".swiper-container", {
+            loop: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+        });
+        //configuração menu 
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu.classList.contains('translate-x-full')) {
+              menu.classList.remove('translate-x-full');
+            } else {
+              menu.classList.add('translate-x-full');
+            }
+          }
+    </script>
+
+</body>
+</html>
